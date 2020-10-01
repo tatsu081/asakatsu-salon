@@ -1,0 +1,57 @@
+// ==============================
+// 変数
+// ==============================
+$color_default: #333;
+$color_w: #fff;
+$color_twitter: #1da1f2;
+$color_instagram: #D93177;
+$color_youtube: #cd201f;
+$color_line: #00b900;
+$color_orange:  #FF9900;
+
+$font-size_s: 12px;
+$font-size_m: 14px;
+$font-size_default: 16px;
+$font-size_l: 18px;
+$font-size_xl: 24px;
+$font-size_xxl: 30px;
+$font-size_3l: 40px;
+
+$site-width: 980px;
+
+$breakpoints: (
+  'sm': 'screen and (max-width: 414px)',
+  'md': 'screen and (max-width: 768px)',
+  'lg': 'screen and (max-width: 1000px)',
+  'xl': 'screen and (max-width: 1200px)',
+) !default;
+
+// ==============================
+// mixin
+// ==============================
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// ==================================
+// base
+// ==================================
+html, body {
+  color: #333;
+  letter-spacing: 0.1rem;
+  line-height: 1.7;
+  -webkit-font-feature-settings: "palt";
+  font-feature-settings: "palt";
+  font-family: 'Roboto', "Noto Sans CJK JP", sans-serif;
+  font-weight: 400;
+  font-size: $font-size_default;
+}
+
+a{
+    color:$color_default;
+    font-weight:bold;
+    text-decoration:none;
+    cursor: pointer;
+}

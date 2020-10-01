@@ -1,0 +1,431 @@
+@import "foundation.scss";
+
+.topBanner{
+  width: 80%;
+  max-width: $site-width;
+  margin: 3% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq(){
+    width: 100%;
+    margin: 10% auto;
+  }
+
+  &__top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 3%;
+
+    @include mq(){
+      flex-direction: column;
+      margin: 0;
+    }
+
+    &__left{
+      width: 50%;
+
+      @include mq(){
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+
+    &__right{
+      width: 45%;
+
+      @include mq(){
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      &__title{
+        padding-bottom: 3%;
+
+        @include mq(){
+          padding: 5% 0;
+          text-align: center;
+        }
+
+        .top-title{
+          color: $color_orange;
+          
+          @include mq(){
+            font-size: $font-size_m
+          }
+        }
+
+        .salon-name{
+          font-weight: 500;
+
+          @include mq(){
+            font-size: $font-size_xl;
+          }
+        }
+      }
+      
+      &__snsButton{
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+        &__item{
+          color: $color_w;
+          font-weight: 400;
+          -webkit-transition: all 0.4s;
+          transition: all 0.4s;
+
+          &:hover{
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+        }
+      }
+    }
+
+    img{
+      width: 500px;
+      height: 300px;
+      border-radius: 4px;
+      box-shadow: rgba(0, 0, 0, 0.1) 1px 4px 7px;
+
+      @include mq(){
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__bottom{
+    width: 80%;
+    margin: 0 auto;
+
+    @include mq(){
+      width: 90%;
+      padding-top: 5%;
+      border-top: 1px solid #DFDFDF;
+    }
+
+    .salon-contents{
+      font-size: $font-size_l;
+
+      @include mq(){
+        font-size: $font-size_m;
+      }
+
+      span{
+        font-weight: bold;
+      }
+    }
+
+    .salon-attention{
+      font-size: $font-size_m;
+      margin-top: 2%;
+
+      @include mq(){
+        font-size: $font-size_s;
+      }
+    }
+  }
+
+}
+
+.main{
+  background-image: url("http://www.netyasun.com/home/bk-img/b002.gif");
+  background-repeat: repeat;
+
+  &__wrap{
+    display: flex;
+    flex-direction: column;
+
+    @include mq(){
+      padding: 10% 0 20%;
+    }
+  }
+
+  &__container{
+    width: 70%;
+    margin: 3% auto;
+    max-width: $site-width;
+    padding: 5%;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.04);
+
+    @include mq(){
+      width: 100%;
+      margin: 5% auto;
+      padding: 10% 5%;
+      border-radius: 10px;
+    }
+
+    // 入会条件
+    &__title{
+      font-size: $font-size_l;
+      font-weight: bold;
+      margin-bottom: 2%;
+
+      @include mq(){
+        font-size: $font-size_default;
+      }
+    }
+
+    &__description{
+      font-size: $font-size_m;
+
+      @include mq(){
+        font-size: $font-size_s;
+      }
+    }
+
+
+    // 特典部分
+    .benefits-card{
+      margin: 5% auto;
+
+      &__img{
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        margin-top: 3%;
+        border-radius: 4px;
+            border: 1px solid #DFDFDF;
+
+        @include mq(){
+          height: 250px;
+        }
+      }
+
+      &__description{
+        font-size: $font-size_default;
+
+        @include mq(){
+          font-size: $font-size_m;
+        }
+      }
+    }
+
+    .benefits-title{
+      text-align: center;
+      margin-bottom: 3%;
+
+
+
+      &__number{
+        margin-bottom: 1%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $font-size_l;
+
+        @include mq(){
+          font-size: $font-size_default;
+        }
+
+        img{
+          width: 30px;
+          height: 30px;
+          margin-right: 1%;
+
+          @include mq(){
+            width: 25px;
+            height: 25px;
+          }
+        }
+
+        span{
+          font-size: $font-size_xl;
+          font-weight: 600;
+
+          @include mq(){
+            font-size: $font-size_default;
+          }
+          
+        }
+      }
+
+      &__word{
+        font-size: $font-size_xl;
+        font-weight: 500;
+        color: $color_default;
+        background: linear-gradient(transparent 60%, #FFF2EE 60%);
+
+        @include mq(){
+          font-size: $font-size_l;
+        }
+      }
+
+    }
+  }
+
+  .profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq(){
+      flex-direction: column;
+    }
+
+    &__left{
+      width: 30%;
+
+      @include mq(){
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10%;
+      }
+
+      img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    &__right{
+      width: 70%;
+
+      @include mq(){
+        width: 100%;
+      }
+      
+
+      &__name{
+        margin-bottom: 2%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mq(){
+          margin-bottom: 3%;
+        }
+
+        span{
+          font-weight: bold;
+          font-size: $font-size_l;
+          vertical-align: baseline;
+        }
+      }
+
+      &__snsButton{
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+
+        &__item{
+          font-weight: 400;
+          -webkit-transition: all 0.4s;
+          transition: all 0.4s;
+
+          &:hover{
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+      }
+    }
+
+      &__detail{
+        font-size: $font-size_m;
+
+        @include mq(){
+          font-size: $font-size_s;
+        }
+      }
+    }
+  }
+}
+
+// SNS色
+.twitter{
+  color: $color_twitter;
+}
+
+.instagram{
+  color: $color_instagram;
+}
+
+.youtube{
+  color: $color_youtube;
+}
+
+.line{
+  color: $color_line;
+}
+
+// アニメーション
+.scrollanime {opacity: 0;} /*一瞬表示されるのを防ぐ*/
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;         
+    }
+    100% {
+    opacity: 1;
+    transform: translate(0);
+    }
+}
+
+// ボタンスクロール表示
+#js-page-top {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #FF9900;
+  color: $color_w;
+  position: fixed;
+  bottom: 60px;
+  right: 40px;
+  display: block;
+  box-shadow: 0 3px 4px rgba(0,0,0,.2), 0 0 2px 0 rgba(0,0,0,.2);
+
+  @include mq(){
+    width: 100px;
+    height: 100px;
+    right: 15px;
+    bottom: 30px;
+  }
+}
+
+.scrollButton{
+  position: absolute;
+  top: 55px;
+  left: 30px;
+  text-align: center;
+  font-size: 1.4em;
+  line-height: 1.0;
+
+  @include mq(){
+    font-size: $font-size_l;
+    top: 30px;
+    left: 12px;
+  }
+
+  span{
+    font-size: 0.4em;
+
+    @include mq(){
+      font-size: 0.5em;
+    }
+  }
+}
+.sp{
+  display: block;
+
+  @include mq(){
+    display: none;
+  }
+}
